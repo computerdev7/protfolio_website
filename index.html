@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash Upadhyay</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/tailwindcss">
+        @theme {
+                --font-roboto: 'Raleway', sans-serif;
+            }
+        @keyframes blinking {
+             0%   { border-color: rgba(0,0,0,1); }
+             50%  { border-color: rgba(0,0,0,0.2); }
+             100% { border-color: rgba(0,0,0,1); }
+        }
+
+        @keyframes typing { 
+            from { width: 0 } 
+            to { width: var(--w) }
+         }
+         
+         .typing{
+            animation : typing 3s ease-in forwards,  blinking 0.5s ease-in infinite;
+         }
+        </style>
+</head>
+
+<body class="overflow-x-hidden">
+    <div id="main"
+        class="min-h-screen max-w-screen pt-20 pb-15 p-2 lg:p-20 md:pt-30 lg:pt-30 flex justify-center bg-gray-200 font-roboto scroll-smooth">
+        <div id="nav"
+         class="fixed top-5 h-10 md:h-15 w-7/8 md:w-6/8 lg:w-[900px] z-10 left-1/2 -translate-x-1/2 rounded-xl flex 
+            justify-between items-center pl-10 pr-10 bg-white/50 backdrop-blur-md border border-gray-200">
+            <div class="sm:w-4/5 w-3/5 flex items-center justify-start">
+                <button id="home"
+                    class="p-1 text-lg md:text-2xl md:p-2 font-bold inset-shadow-sm/10 rounded-4xl hover:bg-gray-200 transistion-all duration-300">
+                    <i class="fa-solid fa-house"></i>
+                </button>
+            </div>
+            <div class="sm:w-1/5 w-2/5 flex justify-around items-center text-3xl rounded-xl inset-shadow-sm ">
+                <a href="https://www.linkedin.com/in/akashupadhyay9/">
+                    <button class="text-2xl md:text-3xl hover:text-3xl hover:sm:text-4xl transistion-all duration-300">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </button>
+                </a>
+                <a href="https://github.com/computerdev7">
+                    <button class="text-2xl md:text-3xl hover:text-3xl hover:sm:text-4xl transistion-all duration-300">
+                        <i class="fa-brands fa-github"></i>
+                    </button>
+                </a>
+                <button id="toggle" class="text-2xl md:text-3xl hover:text-3xl hover:sm:text-4xl transistion-all duration-300">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="innermain"
+            class="h-fit w-7/8 md:w-6/8 lg:w-[900px] p-1 sm:p-3 lg:p-5 bg-white rounded-xl inset-shadow-sm/8 border border-gray-300">
+            <!-- main intro -->
+            <div class="h-10 text-md min-[400px]:text-lg min-[500px]:text-2xl min-[600px]:text-3xl min-[850px]:text-4xl lg:text-5xl
+                 md:h-15 w-full flex justify-between items-center border-b pb-1">
+                <h1 class="font-bold tracking-wide">Akash Upadhyay</h1>
+                <p id="ani" class="tracking-wide overflow-hidden whitespace-nowrap border-r-2 animate">Web Developer</p>
+            </div>
+            <!-- About me section -->
+            <div class="w-full pt-5">
+                <h2 class="text-sm sm:text-lg pb-2 underline">About Me</h2>
+                <p class="text-xs sm:text-sm"><b>Full-stack developer</b> skilled in building web applications using
+                    <b>MERN Stack</b>.
+                    Currently working on <b>personal projects</b> and improving problem-solving skills through DSA.
+                    Actively seeking internship opportunities to apply my knowledge and gain practical experience
+                </p>
+            </div>
+            <!-- Education section -->
+            <div class="w-full pt-5">
+                <p class="text-sm sm:text-lg pb-2 underline ">Education</p>
+                <div class="w-full h-10 text-xs sm:text-sm flex justify-between items-center border-b-1 ">
+                    <p class="h-15 min-[460px]:h-10 w-1/3  flex justify-center items-center pr-1 md:pr-5 ">B.Sc -
+                        Computer science</p>
+                    <p
+                        class="h-15 min-[460px]:h-10 w-1/3 border-r-1 border-l-1 pl-1 pr-1 md:pr-5 md:pl-5 flex justify-center items-center">
+                        Lords
+                        Universal College</p>
+                    <p class="h-15 min-[460px]:h-10 w-1/3 flex justify-center items-center pl-1 md:pl-5">2021 - 2025</p>
+                </div>
+                <div class="w-full flex justify-between text-xs sm:text-sm">
+                    <p class="h-15 min-[460px]:h-10 w-1/3  flex justify-center items-center pr-1 md:pr-5">HSC</p>
+                    <p
+                        class="h-15 min-[460px]:h-10 w-1/3 border-r-1 border-l-1 pl-1 pr-1 md:pr-5 md:pl-5 flex justify-center items-center">
+                        Vidya Nidhi
+                        College Of Science</p>
+                    <p class="h-15 min-[460px]:h-10 w-1/3  flex justify-center items-center pl-1 md:pl-5">2018 - 2020
+                    </p>
+                </div>
+            </div>
+            <!-- Skills sections -->
+            <div class="pt-5">
+                <p class="text-sm sm:text-lg pb-2 underline ">Skill</p>
+                <!-- language section -->
+                <div class="w-full h-15 flex justify-between items-center border-b-1">
+                    <div class="w-1/4 border-r-1 h-full flex justify-center items-center font-bold text-xs sm:text-sm">
+                        Languages</div>
+                    <div
+                        class="w-3/4 h-full flex justify-center gap-5 md:gap-10 items-center text-2xl sm:text-3xl lg:text-4xl">
+                        <i class="devicon-javascript-plain colored "></i>
+                        <i class="devicon-c-original colored "></i>
+                    </div>
+                </div>
+                <!-- frontend section -->
+                <div class="w-full h-15 flex justify-between items-center border-b-1">
+                    <div class="w-1/4 border-r-1 h-full flex justify-center items-center font-bold text-xs sm:text-sm">
+                        Frontend</div>
+                    <div
+                        class="w-3/4 h-full flex justify-center gap-5 md:gap-10 items-center text-2xl sm:text-3xl lg:text-4xl">
+                        <i class="devicon-html5-plain colored "></i>
+                        <i class="devicon-css3-plain colored "></i>
+                        <i class="devicon-react-original colored "></i>
+                        <i class="devicon-tailwindcss-original colored "></i>
+                        <i class="devicon-chakraui-plain colored "></i>
+                    </div>
+                </div>
+                <!-- backend & database section -->
+                <div class="w-full h-15 flex justify-between items-center border-b-1">
+                    <div class="w-1/4 border-r-1 h-full flex justify-center items-center font-bold text-xs sm:text-sm">
+                        Backend & Database
+                    </div>
+                    <div
+                        class="w-3/4 h-full flex justify-center gap-5 md:gap-10 items-center text-2xl sm:text-3xl lg:text-4xl">
+                        <i class="devicon-nodejs-plain-wordmark colored "></i>
+                        <i class="devicon-express-original colored "></i>
+                        <i class="devicon-mongodb-plain colored"></i>
+                        <i class="devicon-azuresqldatabase-plain colored "></i>
+                        <i class="devicon-redis-plain colored "></i>
+                    </div>
+                </div>
+                <!-- tools -->
+                <div class="w-full h-15 flex justify-between items-center border-b-1">
+                    <div class="w-1/4 border-r-1 h-full flex justify-center items-center font-bold text-xs sm:text-sm">
+                        Tools</div>
+                    <div
+                        class="w-3/4 h-full flex justify-center gap-5 md:gap-10 items-center text-2xl sm:text-3xl lg:text-4xl">
+                        <i class="devicon-git-plain colored "></i>
+                        <i class="devicon-github-original colored "></i>
+                        <i class="devicon-vscode-plain colored "></i>
+                        <i class="devicon-postman-plain colored "></i>
+                    </div>
+                </div>
+                <!-- deployment -->
+                <div class="w-full h-15 flex justify-between items-center">
+                    <div class="w-1/4 border-r-1 h-full flex justify-center items-center font-bold text-xs sm:text-sm">
+                        Deployment</div>
+                    <div
+                        class="w-3/4 h-full flex justify-center gap-5 md:gap-10 items-center text-2xl sm:text-3xl lg:text-4xl">
+                        <i class="devicon-amazonwebservices-plain-wordmark colored "></i>
+                        <i class="devicon-githubactions-plain colored "></i>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-5">
+                <p class="text-sm sm:text-lg pb-2 underline">Projects</p>
+                <div class="w-full p-5 flex items-center justify-around flex-col gap-2 sm:flex-row">
+                    <!-- project 1 -->
+                    <div id="p1"
+                        class="h-75 w-[250px] sm:w-[250px] bg-red-200 rounded-xl overflow-hidden bg-white/50 shadow-2xl border border-gray-500/30">
+                        <div class="w-full h-40">
+                            <img class="w-full h-full" src="./images/chess.png" />
+                        </div>
+                        <div class="p-2 h-35 text-sm flex justify-between flex-col">
+                            <p class="font-bold h-10 text-sm sm:text-lg">Online Multiplayer Chess</p>
+                            <div class="w-full h-18 flex flex-wrap gap-1 text-xs">
+                                <div class="h-fit border-b border rounded-xl p-1">
+                                    React
+                                </div>
+                                <div class="h-fit border-b border rounded-xl p-1">
+                                    TailwindCss
+                                </div>
+                                <div class="h-fit border-b border rounded-xl p-1">
+                                    Express
+                                </div>
+                                <div class="h-fit border-b border rounded-xl p-1">
+                                    Scoket.io
+                                </div>
+                            </div>
+                            <div class="w-full pt-1 h-7 flex items-center justify-between">
+                                <a href="https://online-chessgame.netlify.app/">
+                                    <button
+                                        class="border p-1 rounded bg-gray-700 text-white text-xs sm:text-[15px] active:bg-black active:text-gray-500 border border-gray-300">
+                                        Website
+                                    </button>
+                                </a>
+                                <a href="https://github.com/computerdev7/chess-react">
+                                    <button
+                                        class="border p-1 rounded bg-gray-700 text-white text-xs sm:text-[15px] active:bg-black active:text-gray-500 border border-gray-300">
+                                        Github
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- project 2 -->
+                    <div id="p2"
+                        class="h-75 w-[250px] sm:w-[250px] bg-red-200 rounded-xl overflow-hidden bg-white/50 shadow-2xl border border-gray-500/30">
+                        <div class="w-full h-40">
+                            <img class="w-full h-full" src="./images/Ongoing.png" />
+                        </div>
+                        <div class="p-2 h-35 flex justify-between flex-col">
+                            <p class="font-bold h-10 text-sm sm:text-lg">E-Commerce Website</p>
+                            <div class="w-full h-18 flex flex-wrap gap-1 text-xs">
+                                <div class="h-fit border-b border rounded-xl p-1">
+                                    MERN
+                                </div>
+                                <div class="h-fit border-b border rounded-xl p-1">
+                                    Redis
+                                </div>
+                                <div class="h-fit border-b border rounded-xl p-1">
+                                    Auth
+                                </div>
+                                <div class="h-fit border-b border rounded-xl p-1">
+                                    S3
+                                </div>
+                            </div>
+                            <div class="w-full pt-1 h-7 flex items-center justify-between">
+                                <button disabled
+                                    class="border p-1 rounded bg-gray-700 text-white text-xs sm:text-[15px] border border-gray-300">
+                                    Ongoing
+                                </button>
+                                <a href="https://github.com/computerdev7/e-commerce">
+                                    <button
+                                        class="border p-1 rounded bg-gray-700 text-white text-xs sm:text-[15px] active:bg-black active:text-gray-500 border border-gray-300">
+                                        Github
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script>
+
+       // Scroll to top
+document.getElementById('home').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Typing animation
+const p = document.getElementById('ani');
+const words = ['web developer', 'full-stack dev'];
+let index = 0;
+
+function typeWord() {
+    const word = words[index];
+    p.textContent = word;
+    p.style.setProperty('--w', word.length + 'ch');
+    p.classList.remove('typing');
+    void p.offsetWidth; // force reflow
+    p.classList.add('typing');
+    index = (index + 1) % words.length;
+    setTimeout(typeWord, 3200);
+}
+
+typeWord();
+
+// Dark/light toggle
+const toggle = document.getElementById('toggle');
+const elements = {
+    main: document.getElementById('main'),
+    inner: document.getElementById('innermain'),
+    nav: document.getElementById('nav'),
+    p1: document.getElementById('p1'),
+    p2: document.getElementById('p2')
+};
+
+toggle.addEventListener('click', () => {
+    const current = localStorage.getItem('tog') || 'sun';
+    localStorage.setItem('tog', current === 'sun' ? 'moon' : 'sun');
+    setColor();
+});
+
+function setColor() {
+    const mode = localStorage.getItem('tog') || 'sun';
+    if (mode === 'sun') {
+        Object.assign(elements.main.style, { backgroundColor: '#e5e7eb', color: 'black' });
+        Object.assign(elements.inner.style, { backgroundColor: 'white', borderColor: '#d1d5db' });
+        Object.assign(elements.nav.style, { backgroundColor: 'rgba(255,255,255,0.5)', borderColor: '#e5e7eb' });
+        [elements.p1, elements.p2].forEach(el => {
+            Object.assign(el.style, { backgroundColor: 'rgba(255,255,255,0.5)', borderColor: '#d1d5db' });
+        });
+    } else {
+        Object.assign(elements.main.style, { backgroundColor: '#27272a', color: 'white' });
+        Object.assign(elements.inner.style, { backgroundColor: '#3f3f46', borderColor: '#71717a' });
+        Object.assign(elements.nav.style, { backgroundColor: 'rgba(0,0,0,0.3)', borderColor: '#374151' });
+        [elements.p1, elements.p2].forEach(el => {
+            Object.assign(el.style, { backgroundColor: 'rgba(0,0,0,0.1)', borderColor: '#71717a' });
+        });
+    }
+}
+
+
+setColor();
+
+    </script>
+</body>
+
+</html>
