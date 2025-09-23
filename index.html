@@ -38,16 +38,20 @@
 <body class="overflow-x-hidden">
     <div id="main"
         class="min-h-screen max-w-screen pt-20 pb-15 p-2 lg:p-20 md:pt-30 lg:pt-30 flex justify-center bg-gray-200 font-roboto scroll-smooth">
-        <div id="nav"
-         class="fixed top-5 h-10 md:h-15 w-11/12 md:w-6/8 lg:w-[900px] z-10 left-1/2 -translate-x-1/2 rounded-xl flex 
+        <div id="nav" class="fixed top-5 h-10 md:h-15 w-11/12 md:w-6/8 lg:w-[900px] z-10 left-1/2 -translate-x-1/2 rounded-xl flex 
             justify-between items-center pl-10 pr-10 bg-white/50 backdrop-blur-md border border-gray-200">
-            <div class="sm:w-4/5 w-3/5 flex items-center justify-start">
+            <div class="sm:w-4/5 w-10 flex items-center justify-start">
                 <button id="home"
                     class="p-1 text-lg md:text-2xl md:p-2 font-bold inset-shadow-sm/10 rounded-4xl hover:bg-gray-200 transistion-all duration-300">
                     <i class="fa-solid fa-house"></i>
                 </button>
             </div>
-            <div class="sm:w-1/5 w-2/5 flex justify-around items-center text-3xl rounded-xl inset-shadow-sm ">
+            <div class="sm:w-2/5 w-1/2 flex justify-around items-center text-3xl rounded-xl inset-shadow-sm ">
+                <a href="./showpdf.html">
+                    <button class="text-2xl md:text-3xl hover:text-3xl hover:sm:text-4xl transistion-all duration-300">
+                        <i class="fa-solid fa-file"></i>
+                    </button>
+                </a>
                 <a href="https://www.linkedin.com/in/akashupadhyay9/">
                     <button class="text-2xl md:text-3xl hover:text-3xl hover:sm:text-4xl transistion-all duration-300">
                         <i class="fa-brands fa-linkedin"></i>
@@ -58,7 +62,8 @@
                         <i class="fa-brands fa-github"></i>
                     </button>
                 </a>
-                <button id="toggle" class="text-2xl md:text-3xl hover:text-3xl hover:sm:text-4xl transistion-all duration-300">
+                <button id="toggle"
+                    class="text-2xl md:text-3xl hover:text-3xl hover:sm:text-4xl transistion-all duration-300">
                     <i class="fa-solid fa-sun"></i>
                 </button>
             </div>
@@ -251,66 +256,66 @@
     </div>
     <script>
 
-       // Scroll to top
-document.getElementById('home').addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-// Typing animation
-const p = document.getElementById('ani');
-const words = ['web developer', 'full-stack dev'];
-let index = 0;
-
-function typeWord() {
-    const word = words[index];
-    p.textContent = word;
-    p.style.setProperty('--w', word.length + 'ch');
-    p.classList.remove('typing');
-    void p.offsetWidth; // force reflow
-    p.classList.add('typing');
-    index = (index + 1) % words.length;
-    setTimeout(typeWord, 3200);
-}
-
-typeWord();
-
-// Dark/light toggle
-const toggle = document.getElementById('toggle');
-const elements = {
-    main: document.getElementById('main'),
-    inner: document.getElementById('innermain'),
-    nav: document.getElementById('nav'),
-    p1: document.getElementById('p1'),
-    p2: document.getElementById('p2')
-};
-
-toggle.addEventListener('click', () => {
-    const current = localStorage.getItem('tog') || 'sun';
-    localStorage.setItem('tog', current === 'sun' ? 'moon' : 'sun');
-    setColor();
-});
-
-function setColor() {
-    const mode = localStorage.getItem('tog') || 'sun';
-    if (mode === 'sun') {
-        Object.assign(elements.main.style, { backgroundColor: '#e5e7eb', color: 'black' });
-        Object.assign(elements.inner.style, { backgroundColor: 'white', borderColor: '#d1d5db' });
-        Object.assign(elements.nav.style, { backgroundColor: 'rgba(255,255,255,0.5)', borderColor: '#e5e7eb' });
-        [elements.p1, elements.p2].forEach(el => {
-            Object.assign(el.style, { backgroundColor: 'rgba(255,255,255,0.5)', borderColor: '#d1d5db' });
+        // Scroll to top
+        document.getElementById('home').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
-    } else {
-        Object.assign(elements.main.style, { backgroundColor: '#27272a', color: 'white' });
-        Object.assign(elements.inner.style, { backgroundColor: '#3f3f46', borderColor: '#71717a' });
-        Object.assign(elements.nav.style, { backgroundColor: 'rgba(0,0,0,0.3)', borderColor: '#374151' });
-        [elements.p1, elements.p2].forEach(el => {
-            Object.assign(el.style, { backgroundColor: 'rgba(0,0,0,0.1)', borderColor: '#71717a' });
+
+        // Typing animation
+        const p = document.getElementById('ani');
+        const words = ['web developer', 'full-stack dev'];
+        let index = 0;
+
+        function typeWord() {
+            const word = words[index];
+            p.textContent = word;
+            p.style.setProperty('--w', word.length + 'ch');
+            p.classList.remove('typing');
+            void p.offsetWidth; // force reflow
+            p.classList.add('typing');
+            index = (index + 1) % words.length;
+            setTimeout(typeWord, 3200);
+        }
+
+        typeWord();
+
+        // Dark/light toggle
+        const toggle = document.getElementById('toggle');
+        const elements = {
+            main: document.getElementById('main'),
+            inner: document.getElementById('innermain'),
+            nav: document.getElementById('nav'),
+            p1: document.getElementById('p1'),
+            p2: document.getElementById('p2')
+        };
+
+        toggle.addEventListener('click', () => {
+            const current = localStorage.getItem('tog') || 'sun';
+            localStorage.setItem('tog', current === 'sun' ? 'moon' : 'sun');
+            setColor();
         });
-    }
-}
+
+        function setColor() {
+            const mode = localStorage.getItem('tog') || 'sun';
+            if (mode === 'sun') {
+                Object.assign(elements.main.style, { backgroundColor: '#e5e7eb', color: 'black' });
+                Object.assign(elements.inner.style, { backgroundColor: 'white', borderColor: '#d1d5db' });
+                Object.assign(elements.nav.style, { backgroundColor: 'rgba(255,255,255,0.5)', borderColor: '#e5e7eb' });
+                [elements.p1, elements.p2].forEach(el => {
+                    Object.assign(el.style, { backgroundColor: 'rgba(255,255,255,0.5)', borderColor: '#d1d5db' });
+                });
+            } else {
+                Object.assign(elements.main.style, { backgroundColor: '#27272a', color: 'white' });
+                Object.assign(elements.inner.style, { backgroundColor: '#3f3f46', borderColor: '#71717a' });
+                Object.assign(elements.nav.style, { backgroundColor: 'rgba(0,0,0,0.3)', borderColor: '#374151' });
+                [elements.p1, elements.p2].forEach(el => {
+                    Object.assign(el.style, { backgroundColor: 'rgba(0,0,0,0.1)', borderColor: '#71717a' });
+                });
+            }
+        }
 
 
-setColor();
+        setColor();
 
     </script>
 </body>
